@@ -1,14 +1,9 @@
-// Описаний в документації
-import SimpleLightbox from 'simplelightbox';
-// Додатковий імпорт стилів
+import SimpleLightbox from "simplelightbox";
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
 let lightbox = new SimpleLightbox('.gallery a', {
   /* options */
-  animationSpeed,
-  animationSlide,
-  enableKeyboard,
-  docClose,
+
 });
 
 const images = [
