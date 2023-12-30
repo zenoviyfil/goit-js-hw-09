@@ -1,20 +1,7 @@
-import SimpleLightbox from "simplelightbox";
-import 'simplelightbox/dist/simple-lightbox.min.css';
-
 let lightbox = new SimpleLightbox('.gallery a', {
   /* options */
-  download: false,
-  nav: true,
-  close: true,
-  closeText: "×",
-  animationSpeed: 250,
-  docClose: true,
-  enableKeyboard: true,
-  captions: true,
-  captionSelector: "img",
-  captionType: "attr",
   captionsData: "alt",
-  captionPosition: "bottom",
+  captionDelay: 250,
 });
 
 const images = [
@@ -97,3 +84,6 @@ function createMarkUp(arr) {
     )
     .join('');
 }
+
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
