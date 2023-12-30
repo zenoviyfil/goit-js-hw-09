@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+.gallery {
+    width: 1440px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #FFFFFF;
+}
+
+.gallery-item {
+    list-style-type: none;
+    margin: 10px 10px;
+}
+
+.gallery-item img {
+    width: 340px;
+    height: 100%;
+    transition: 1s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+    transition: 1s ease;
+}
