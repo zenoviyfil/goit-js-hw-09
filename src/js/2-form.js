@@ -9,26 +9,30 @@ populateTextArea();
 function onFormSubmit(event) {
     event.preventDefault();
 
+    if (form.email.value === "" || form.message.value === "") {
+        return;
+    }
+    
     localStorage.removeItem(STORAGE_KEY);
     event.currentTarget.reset();
 }
 
-function onTextAreaInput(event) {
-    const email = event.target.elements.email.value.trim()
-    const message = event.target.elements.textarea.value.trim();
+function onTextAreaInput() {
+    const email = form.elements.email.value.trim()
+    const message = form.elements.message.value.trim();
     
     const formData = {};
     formData.email = email;
     formData.message = message;
-    console.log(formData);
-
-    localStorage.setItem(STORAGE_KEY, formData);
+    
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
 }
 
 function populateTextArea() {
-    const saveMessage = localStorage.getItem(STORAGE_KEY);
+    const saveMessage = JSON.parse(localStorage.getItem(STORAGE_KEY));
 
     if (saveMessage) {
-        form.value = saveMessage;
+        form.email.value = saveMessage.email;
+        form.message.value = saveMessage.message;
     }
 }
