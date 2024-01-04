@@ -1,0 +1,55 @@
+/* ___INPUT___ */
+
+.feedback-form {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+}
+
+.feedback-form input{
+    display: flex;
+    width: 360px;
+    height: 40px;
+    border-radius: 4px;
+}
+
+.feedback-form input:hover {
+    border-color: #000000;
+}
+
+/* ___TEXTAREA___ */
+
+.feedback-form textarea {
+    display: flex;
+    width: 360px;
+    height: 80px;
+    border-radius: 4px;
+}
+
+/* ___BUTTON___ */
+
+.feedback-form button {
+    background: #4E75FF;
+    color: #ffffff;
+    width: 95px;
+    height: 40px;
+    padding: 8px, 16px, 8px, 16px;
+    border-radius: 8px;
+    border: none;
+    margin-top: 10px;
+}
+
+.feedback-form button:hover {
+    cursor: pointer;
+    background:#6C8CFF;
+}
+
+/* ___LINK___ */
+
+.link {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: #000000;
+}

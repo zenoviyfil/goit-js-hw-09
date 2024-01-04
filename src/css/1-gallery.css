@@ -4,7 +4,7 @@
 
 .gallery {
     width: 1440px;
-    height: 100%;
+    height: auto;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
@@ -14,7 +14,7 @@
 
 .gallery-item {
     list-style-type: none;
-    margin: 10px 10px;
+    margin: 6px 6px;
 }
 
 .gallery-item img {
@@ -26,4 +26,11 @@
 .gallery-item img:hover {
     transform: scale(1.05);
     transition: 1s ease;
+}
+
+
+.link {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: #000000;
 }
