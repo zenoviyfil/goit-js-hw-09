@@ -10,22 +10,25 @@ function onFormSubmit(event) {
     event.preventDefault();
 
     if (form.email.value === "" || form.message.value === "") {
-        return;
+        return alert('All spaces must be filled!');
     }
     
+    const formDataObj = JSON.parse(localStorage.getItem(STORAGE_KEY));
+    console.log(formDataObj);
+
     localStorage.removeItem(STORAGE_KEY);
     event.currentTarget.reset();
 }
 
 function onTextAreaInput() {
-    const email = form.elements.email.value.trim()
-    const message = form.elements.message.value.trim();
-    
-    const formData = {};
-    formData.email = email;
-    formData.message = message;
-    
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
+  const email = form.elements.email.value.trim();
+  const message = form.elements.message.value.trim();
+
+  const formData = {};
+  formData.email = email;
+  formData.message = message;
+
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
 }
 
 function populateTextArea() {
